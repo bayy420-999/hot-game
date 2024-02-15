@@ -5,13 +5,13 @@
 ### On Linux and Windows
 
 - Clone this repository
-- 
+
 ```shell
-git clone
+git clone https://github.com/bayy420-999/hot-game.git
 ```
 
 - Install python dependecies
-- 
+
 ```shell
 pip install -r requirments.txt
 ```
@@ -53,7 +53,7 @@ pacman -Sy python-pip
 - Clone this repository
 
 ```shell
-git clone 
+git clone https://github.com/bayy420-999/hot-game.git
 ```
 
 - Install python dependecies
