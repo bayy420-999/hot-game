@@ -13,7 +13,7 @@ git clone https://github.com/bayy420-999/hot-game.git
 - Install python dependecies
 
 ```shell
-pip install -r requirments.txt
+pip install -r requirements.txt
 ```
 
 ### On Termux (Not recommended)
@@ -59,7 +59,7 @@ git clone https://github.com/bayy420-999/hot-game.git
 - Install python dependecies
 
 ```shell
-pip install -r requirments.txt
+pip install -r requirements.txt
 ```
 
 ## Usage
