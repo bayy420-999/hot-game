@@ -20,5 +20,5 @@ async def main():
             print(f'\nWait for{str(datetime.timedelta(seconds=delay))}\n')
             time.sleep(delay)
             #client.print_transaction(txn)
-
-asyncio.run(main())
+if __name__ == '__main__':
+    asyncio.run(main())
