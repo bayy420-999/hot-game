@@ -1,6 +1,7 @@
 import json
 import pydantic
 from typing import Optional
+
 class Settings(pydantic.BaseModel):
     claim_every: int
     rpc: str
