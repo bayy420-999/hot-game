@@ -12,14 +12,16 @@ async def main():
     PRIVATE_KEY = os.getenv('PRIVATE_KEY')
     RPC = os.getenv('RPC')
     
-    async with HotGameBot(ACCOUNT_ID, PRIVATE_KEY, rpc=RPC) as client:
-        for i in range(5000):
-            txn = await client.claim()
-            print(txn.transaction_outcome.__dict__)
-            delay = 60 * 60 * 2 + random.randint(10, 60)
-            print(f'\nWait for{str(datetime.timedelta(seconds=delay))}\n')
-            time.sleep(delay)
-            #client.print_transaction(txn)
+    try:
+        async with HotGameBot(ACCOUNT_ID, PRIVATE_KEY, rpc=RPC) as client:
+            for i in range(5000):
+                txn = await client.claim()
+                print(txn.transaction_outcome.__dict__, flush=True)  # Flush output
+                delay = 60 * 60 * 4 + random.randint(10, 60)
+                print(f'\nWait for {str(datetime.timedelta(seconds=delay))}\n', flush=True)  # Flush output
+                time.sleep(delay)
+                print(f'Finished claiming at {datetime.datetime.now()}', flush=True)  # Flush output
+    except Exception as e:
+        print(f"An exception occurred: {e}")
 
-if __name__ == '__main__':
-    asyncio.run(main())
+asyncio.run(main())
